@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
 
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -19,7 +19,7 @@
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню </span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current"> <a class="site-list__link " href="#"> Главная </a></li>
+          <li class="site-list__item site-list__item--current"> <a class="site-list__link " href="index.html"> Главная </a></li>
           <li class="site-list__item"> <a class="site-list__link" href="catalog.html"> Каталог продукции </a></li>
           <li class="site-list__item"> <a class="site-list__link" href="form.html"> Подбор программы </a></li>
         </ul>
@@ -31,7 +31,7 @@
 
     <section class="form">
       <header class="form__header">
-        <h3> Подбор программы </h3>
+        <h3 class="form__title"> Подбор программы </h3>
       </header>
       <div class="form__wrapper">
         <p class="form__notion">Заполните анкету, и мы подберем программу питания для вашего кота </p>
@@ -40,17 +40,17 @@
             <legend class="visually-hidden"> Характеристики питомца</legend>
             <ul class="form__fill__group__list">
               <li class="form__fill__group__item">
-                <label for="name"> ИМЯ: <sup>* </sup></label>
+                <label class="form__fill__label" for="name"> ИМЯ: <sup>* </sup></label>
                 <input type="text" id="name" name="name" placeholder="Барсик" required>
               </li>
 
               <li class="form__fill__group__item">
-                <label for="weight"> Вес (кг): <sup>* </sup></label>
+                <label class="form__fill__label" for="weight"> Вес (кг): <sup>* </sup></label>
                 <input type="text" id="weight" name="weight" placeholder="7" required>
               </li>
 
               <li class="form__fill__group__item">
-                <label for="years"> Возраст (лет): </label>
+                <label class="form__fill__label" for="years"> Возраст (лет): </label>
                 <input type="text" id="years" name="years" placeholder="7">
               </li>
             </ul>
@@ -63,7 +63,7 @@
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" name="requirement" type="radio" value="weight-loss"
                   id="weight-loss" checked>
-                <label for="weight-loss">
+                <label class="form__fill__label" for="weight-loss">
                   <span class="control-mark"></span>
                   <span class="control-label"> Похудение </span></label>
               </li>
@@ -71,7 +71,7 @@
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" name="requirement" type="radio" value="weight-gain"
                   id="weight-gain">
-                <label for="weight-gain">
+                <label class="form__fill__label" for="weight-gain">
                   <span class="control-mark"></span>
                   <span class="control-label"> Набор массы </span></label>
               </li>
@@ -79,7 +79,7 @@
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" name="requirement" type="radio" value="dont-know"
                   id="dont-know">
-                <label for="dont-know">
+                <label class="form__fill__label" for="dont-know">
                   <span class="control-mark"></span>
                   <span class="control-label"> Не знаю (Нужен ваш совет) </span></label>
               </li>
@@ -91,12 +91,12 @@
             <ul class="form__fill__group__list">
 
               <li class="form__fill__group__item">
-                <label for="email"> E-mail: <sup>* </sup></label>
+                <label class="form__fill__label" for="email"> E-mail: <sup>* </sup></label>
                 <input type="text" id="email" name="email" placeholder="kuklachev@gmail.com" required>
               </li>
 
               <li class="form__fill__group__item">
-                <label for="phone"> Телефон: <sup>* </sup></label>
+                <label class="form__fill__label" for="phone"> Телефон: <sup>* </sup></label>
                 <input type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
@@ -113,27 +113,27 @@
 
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" id="sweetener" name="sweetener" type="checkbox" checked>
-                <label for="sweetener">
+                <label class="form__fill__label" for="sweetener">
                   <span class="control-mark"></span>
                   <span class="control-label"> Сахарозаменитель </span></label>
               </li>
 
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" id="drink-water" name="drink-water" type="checkbox">
-                <label for="drink-water">
+                <label class="form__fill__label" for="drink-water">
                   <span class="control-mark"></span>
                   <span class="control-label"> Питьевая вода </span></label>
               </li>
 
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" id="milk" name="milk" type="checkbox">
-                <label for="milk">
+                <label class="form__fill__label" for="milk">
                   <span class="control-mark"></span>
                   <span class="control-label"> Молоко </span></label>
               </li>
               <li class="form__fill__group__item">
                 <input class="visually-hidden control-input" id="vitamins" name="vitamins" type="checkbox">
-                <label for="vitamins">
+                <label class="form__fill__label" for="vitamins">
                   <span class="control-mark"></span>
                   <span class="control-label"> Витамины </span></label>
               </li>
@@ -152,10 +152,10 @@
         <address class="address__place"> ул. Большая Конюшенная, д. 19/8 Санкт-Петербург </address>
       </div>
 
-      <div class="address__wrapper">
+      <div class="address__wrapper map-wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.167342576136!2d30.31972967745924!3d59.93905025206773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1637990218770!5m2!1sru!2sru"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>
