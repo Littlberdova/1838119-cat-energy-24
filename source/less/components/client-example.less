@@ -5,6 +5,8 @@
   padding-right: 20px;
   padding-bottom: 40px;
   background-color: @client-example-bg-color;
+  display: flex;
+  flex-direction: column;
 }
 
 .client-example__header {
@@ -22,6 +24,13 @@
 .client-example__description {
   margin-top: 0;
   margin-bottom: 20px;
+  width: auto;
+}
+
+.client-example__numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .client-example__numbers-summary {
@@ -30,6 +39,8 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  order: 2;
+  margin-top: 20px;
 }
 
 .client-example__numbers-data {
@@ -54,3 +65,109 @@
   line-height: 20px;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .client-example__wrapper {
+    padding-top: 43px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 56px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(234, 234, 234, 1) 50%);
+  }
+
+  .client-example__header {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  .client-example__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  .client-example__history {
+    margin-bottom: 576px;
+  }
+
+  .client-example__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .client-example__numbers-summary {
+    width: 174px;
+    text-align: end;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    order: 2;
+  }
+
+  .client-example__numbers-data {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .client-example__navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .client-example__button {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .client-example__wrapper {
+    padding-top: 69px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 65px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 25%, rgba(234, 234, 234, 1) 25%);
+  }
+
+  .client-example__header {
+    margin-bottom: 146px;
+  }
+
+  .client-example__container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .client-example__description {
+    margin-bottom: 84px;
+  }
+
+  .client-example__history {
+    margin-bottom: 0;
+    width: 436px;
+  }
+
+  .client-example__numbers {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .client-example__numbers-summary {
+    width: 327px;
+    margin-top: 55px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    order: 2;
+  }
+
+  .client-example__animation {
+    width: 591px;
+  }
+}
+
