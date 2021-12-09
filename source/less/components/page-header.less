@@ -1,4 +1,42 @@
 .page-header {
+  width: auto;
   margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
+.page-header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__logo-wrapper {
+    justify-content: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding-left: 110px;
+    padding-right: 110px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(104, 183, 56, 0.85) 50%), url("../../img/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: cover;
+  }
+}

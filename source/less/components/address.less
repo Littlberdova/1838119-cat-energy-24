@@ -5,6 +5,8 @@
   padding-right: 19px;
   padding-top: 28px;
   padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .address__note {
@@ -13,10 +15,65 @@
   font-size: 16px;
   line-height: 20px;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .address__place {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .address__wrapper {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .address__note {
+    font-size: 20px;
+    line-height: 26px;
+    width: 172px;
+  }
+
+  .address__place {
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address {
+    position: relative;
+  }
+
+  .address__wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    background-color: #ffffff;
+    position: absolute;
+    width: 565px;
+    box-sizing: border-box;
+    left: 110px;
+    top: 95px;
+  }
+
+  .address__note {
+    font-size: 20px;
+    line-height: 26px;
+    width: 163px;
+  }
+
+  .address__place {
+    font-size: 16px;
+    line-height: 20px;
+    width: 155px;
+    text-align: right;
+  }
 }

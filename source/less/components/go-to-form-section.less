@@ -1,3 +1,8 @@
+.go-to-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .go-to-form__wrapper {
   margin: 0;
   margin-bottom: 135px;
@@ -13,12 +18,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .go-to-form_header {
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
   color: @go-to-form-text-color;
 }
 
@@ -28,4 +37,61 @@
   text-transform: uppercase;
   text-align: center;
   color: @go-to-form-text-color;
+  margin: 0;
+}
+
+.go-to-form__button {
+  align-self: center;
+  width: 280px;
+  padding: 7px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .go-to-form {
+    align-items: flex-start;
+    padding-top: 62px;
+    padding-bottom: 526px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .go-to-form__wrapper {
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .go-to-form_header {
+    color: #000000;
+    font-size: 60px;
+    line-height: 100%;
+    width: 448px;
+    text-align: left;
+  }
+
+  .go-to-form__slogan {
+    font-size: 20px;
+    line-height: 100%;
+    color: #000000;
+    text-align: left;
+  }
+
+  .go-to-form__button {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .go-to-form {
+    align-items: flex-start;
+    padding-top: 114px;
+    padding-bottom: 185px;
+    padding-left: 190px;
+    padding-right: 190px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(104, 183, 56, 0.85) 50%), url("../../img/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 10%; /*что-то кот огромный получается, надеюсь, что логика действий моих здесь верна по созданию такого фона*/
+    background-size: cover;
+    margin-bottom: 82px;
+  }
 }
