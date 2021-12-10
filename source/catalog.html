@@ -15,9 +15,9 @@
           src="img/logo-mobile.svg" width="34" height="38" alt="Логотип компании"></a>
       <a class="page-header__logo" href="index.html"> <img class="page-header__logo-text"
           src="img/text-logo.svg" width="101" height="18" alt="Cat Energy"></a>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню </span></button>
     </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню </span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--current"> <a class="site-list__link " href="index.html"> Главная </a></li>
@@ -36,7 +36,9 @@
       <div class="catalog__wrapper">
         <ul class="catalog__list">
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="68" height="86" alt="Продукт 1 500 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name"> Cat Energy PRO 500 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -52,11 +54,15 @@
                 <td> 700 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="84" height="100" alt="Продукт 1 1000 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name"> Cat Energy PRO 1000 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -72,12 +78,16 @@
                 <td> 1000 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
 
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="68" height="86" alt="Продукт 2 500 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name">Cat Energy PRO 500 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -93,12 +103,16 @@
                 <td> 700 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
 
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="84" height="100" alt="Продукт 2 1000 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name"> Cat Energy PRO 1000 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -114,12 +128,16 @@
                 <td> 1000 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
 
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="68" height="86" alt="Продукт 3 500 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name"> Cat Energy slim 500 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -135,12 +153,16 @@
                 <td> 400 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
 
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="84" height="100" alt="Продукт 3 1000 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name"> Cat Energy slim 1000 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -156,12 +178,16 @@
                 <td> 700 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
 
           <li class="catalog__item">
+            <div class="catalog__card-wrapper">
             <img class="catalog__picture" src="#" width="68" height="86" alt="Продукт 4 500 граммов">
+            <div class="catalog__product-information-wrapper">
             <h2 class="catalog__product-name">Cat Energy Slim 500 г </h2>
             <table class="catalog__product-numbers">
               <tr class="catalog__numbers-row">
@@ -177,7 +203,9 @@
                 <td> 500 Р.</td>
               </tr>
             </table>
-            <button class="button order-button" type="button"> Заказать </button>
+            </div>
+            </div>
+            <button class="catalog__button button order-button" type="button"> Заказать </button>
           </li>
 
 
@@ -196,30 +224,47 @@
       <header class="additional-catalog__header">
         <h3 class="additional-catalog__title"> Дополнительные товары </h3>
       </header>
+      <div class="additional-catalog__container">
       <div class="additional-catalog__wrapper">
         <ul class="additional-catalog__list">
           <li class="additional-catalog__item">
+            <div class="additional-catalog-information-wrapper">
             <h2 class="additional-catalog__product-name"> Сахарозаменитель </h2>
+            <div class="additional-catalog__container-wrapper">
             <p class="additional-catalog__ammount"> 1 упаковка (100 г) </p>
             <span class="additional-catalog__price"> 200 Р. </span>
+            </div>
+            </div>
             <button class="additional-catalog__button button order-button" type="button"> Заказать </button>
           </li>
           <li class="additional-catalog__item">
+            <div class="additional-catalog-information-wrapper">
             <h2 class="additional-catalog__product-name"> Питьевая вода </h2>
+            <div class="additional-catalog__container-wrapper">
             <p class="additional-catalog__ammount"> 5 литров </p>
             <span class="additional-catalog__price"> 50 Р. </span>
+            </div>
+            </div>
             <button class="additional-catalog__button button order-button" type="button"> Заказать </button>
           </li>
           <li class="additional-catalog__item">
+            <div class="additional-catalog-information-wrapper">
             <h2 class="additional-catalog__product-name"> Молоко </h2>
+            <div class="additional-catalog__container-wrapper">
             <p class="additional-catalog__ammount"> 1 литр </p>
             <span class="additional-catalog__price"> 100 Р. </span>
+            </div>
+            </div>
             <button class="additional-catalog__button button order-button" type="button"> Заказать </button>
           </li>
           <li class="additional-catalog__item">
+            <div class="additional-catalog-information-wrapper">
             <h2 class="additional-catalog__product-name"> Витамины </h2>
+            <div class="additional-catalog__container-wrapper">
             <p class="additional-catalog__ammount"> 1 упаковка (30 г) </p>
             <span class="additional-catalog__price"> 300 Р. </span>
+            </div>
+            </div>
             <button class="additional-catalog__button button order-button" type="button"> Заказать </button>
           </li>
         </ul>
@@ -230,11 +275,12 @@
         <p class="present__description"> Закажите все и получите чехол для кота в подарок! </p>
         </div>
       </div>
+      </div>
     </section>
 
     <section class="address">
       <h2 class="visually-hidden"> Адрес компании </h2>
-      <div class="address__wrapper">
+      <div class="address__wrapper address__wrapper--grey-theme">
         <p class="address__note"> Приглашаем к сотрудничеству дилеров!</p>
         <address class="address__place"> ул. Большая Конюшенная, д. 19/8 Санкт-Петербург </address>
       </div>

@@ -1,3 +1,8 @@
+.form__fill {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__header {
   width: auto;
   margin: 0;
@@ -40,8 +45,7 @@
 .form__group {
   border: none;
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0;
 }
 
 .form__group-name {
@@ -53,6 +57,16 @@
   padding: 0;
 }
 
+.form__group-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
 .form__label {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -60,6 +74,26 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  flex-shrink: 0;
+}
+
+.form__input {
+  flex-grow: 2;
+  box-sizing: border-box;
+  padding: 13px 15px;
+}
+
+.form__text-input {
+  width: 100%;
+
+  &::placeholder {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #444444;
+    text-transform: uppercase;
+  }
 }
 
 .form__input::placeholder {
@@ -74,4 +108,81 @@
 .form__note {
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__header {
+    padding-top: 65px;
+    padding-bottom: 54px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .form__title {
+    font-size: 60px;
+  }
+
+  .form__wrapper {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 72px;
+  }
+
+  .form__notion {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+  }
+
+  .form__group-name {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__group-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__text-input {
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .form__input::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__note {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__header {
+    padding-top: 73px;
+    padding-bottom: 56px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .form__wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 82px;
+  }
 }
