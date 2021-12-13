@@ -1,0 +1,24 @@
+.additional-product__list {
+  padding-top: 34px;
+  padding-bottom: 41px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-product__list {
+    padding-top: 57px;
+    padding-bottom: 61px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 123px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-product__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 104px;
+  }
+}

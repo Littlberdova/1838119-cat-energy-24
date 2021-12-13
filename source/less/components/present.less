@@ -1,8 +1,3 @@
-.present {
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-
 .present__wrapper {
   background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-cat-background.png");
   background-repeat: no-repeat;
@@ -13,6 +8,7 @@
   padding-left: 58px;
   padding-right: 61px;
   height: 289px;
+  box-sizing: border-box;
 }
 
 
@@ -22,4 +18,29 @@
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .present__wrapper {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    padding-left: 442px;
+    padding-right: 124px;
+    height: 200px;
+  }
+
+  .present__description {
+    width: 161px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present__wrapper {
+    padding-top: 184px;
+    padding-bottom: 42px;
+    padding-left: 40px;
+    padding-right: 43px;
+    height: 100%;
+    width: 245px;
+  }
 }

@@ -1,0 +1,39 @@
+.owner-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-contacts__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 35px;
+  padding-bottom: 23px;
+}
+
+.owner-contacts__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner-contacts__list {
+    padding-top: 76px;
+    padding-bottom: 65px;
+  }
+
+  .owner-contacts__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-contacts__list {
+    padding-top: 76px;
+    padding-bottom: 69px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
+  }
+
+  .owner-contacts__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
