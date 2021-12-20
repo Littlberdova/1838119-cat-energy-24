@@ -31,6 +31,15 @@
   font-display: swap;
 }
 
+.font-face {
+  font-family: "Glyphter", sans-serif;
+  src: url("../../fonts/glyphter/Glyphter.eot");
+  src: url("../../fonts/glyphter/Glyphter.eot?#iefix") format("embedded-opentype"), url("../../fonts/glyphter/Glyphter.woff") format("woff"), url("../../fonts/glyphter/Glyphter.ttf") format("truetype"), url("../../fonts/glyphter/Glyphter.svg#Glyphter") format("svg");
+  font-weight: normal; //Не подключается шрифт свг, почему-то в браузере в sourses я не вижу папки с данным шрифтом
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   height: 100%;
 }
@@ -71,4 +80,13 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

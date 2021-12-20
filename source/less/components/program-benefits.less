@@ -20,14 +20,63 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .program-benefits__item {
   margin-top: 0;
+  padding-left: 80px;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    background-color: #68b738;
+    background-image: url("../../img/program-benefits-1.svg");
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    background-color: #68b738;
+    background-image: url("../../img/program-benefits-2.svg");
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    background-color: #68b738;
+    background-image: url("../../img/program-benefits-3.svg");
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &:nth-child(4)::before {
+    position: absolute;
+    content: "";
+    background-color: #68b738;
+    background-image: url("../../img/program-benefits-4.svg");
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
   }
 }
 
@@ -58,9 +107,84 @@
 
   .program-benefits__item {
     margin-top: 0;
+    padding-left: 0;
+    padding-top: 111px;
+    width: 249px;
 
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+
+    &:nth-child(1)::before {
+      width: 80px;
+      height: 80px;
+      left: 0;
+      top: 0;
+    }
+
+    &:nth-child(2)::before {
+      width: 80px;
+      height: 80px;
+      left: 0;
+      top: 0;
+    }
+
+    &:nth-child(3)::before {
+      width: 80px;
+      height: 80px;
+      left: 0;
+      top: 0;
+    }
+
+    &:nth-child(4)::before {
+      width: 80px;
+      height: 80px;
+      left: 0;
+      top: 0;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      line-height: 100%;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      line-height: 100%;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      line-height: 100%;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      line-height: 100%;
+      right: 0;
+      top: 0;
+      z-index: -1;
     }
   }
 
@@ -91,6 +215,30 @@
 
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+
+    &:nth-child(1)::after {
+      right: 0;
+      top: -40px;
+      z-index: -1;
+    }
+
+    &:nth-child(2)::after {
+      right: 0;
+      top: -40px;
+      z-index: -1;
+    }
+
+    &:nth-child(3)::after {
+      right: 0;
+      top: -40px;
+      z-index: -1;
+    }
+
+    &:nth-child(4)::after {
+      right: 0;
+      top: -40px;
+      z-index: -1;
     }
   }
 
