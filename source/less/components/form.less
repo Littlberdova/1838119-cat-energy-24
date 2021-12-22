@@ -55,6 +55,7 @@
   line-height: 26px;
   color: #000000;
   padding: 0;
+  position: relative;
 }
 
 .form__group-item {
@@ -77,10 +78,28 @@
   flex-shrink: 0;
 }
 
+.form__input-wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
 .form__input {
+  width: 100%;
   flex-grow: 2;
   box-sizing: border-box;
-  padding: 13px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 34px;
+
+  &:focus-visible {
+    border-color: #444444;
+    outline: none;
+  }
+
+  &:focus-visible ~ .form__navigation-icon {
+    fill: #68b738; //Очень странное окрашивание иконок, хотя я удалила fill  у  path
+  }
 }
 
 .form__text-input {
@@ -93,6 +112,11 @@
     line-height: 18px;
     color: #444444;
     text-transform: uppercase;
+  }
+
+  &:focus-visible {
+    border-color: #444444;
+    outline: none;
   }
 }
 
@@ -108,6 +132,11 @@
 .form__note {
   font-size: 14px;
   line-height: 16px;
+}
+
+.form__button {
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 @media (min-width: @tablet-width) {
@@ -170,9 +199,20 @@
     font-size: 16px;
     line-height: 16px;
   }
+
+  .form__button {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .form__group-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
   .form__header {
     padding-top: 73px;
     padding-bottom: 56px;

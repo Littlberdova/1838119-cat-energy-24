@@ -1,15 +1,31 @@
 .page-header {
   width: auto;
   margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
 }
 
 .page-header__logo-wrapper {
+  width: 190px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.page-header__logo-wrapper:hover .page-header__logo .page-header__logo-text,
+.page-header__logo-wrapper:hover .page-header__logo .page-header__logo-image {
+  opacity: 0.5;
+}
+
+.page-header__logo-wrapper:active .page-header__logo .page-header__logo-text,
+.page-header__logo-wrapper:active .page-header__logo .page-header__logo-image {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,7 +53,7 @@
   }
 
   .page-header--cat-bg {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(104, 183, 56, 0.85) 50%), url("../../img/index-background-desktop.jpg");
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(104, 183, 56, 0.85) 50%), url("../img/index-background-desktop.jpg");
     background-repeat: no-repeat;
     background-position-y: top;
     background-size: cover;

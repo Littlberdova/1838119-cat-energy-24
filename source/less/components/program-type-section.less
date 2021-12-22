@@ -23,9 +23,47 @@
   padding-right: 33px;
   padding-top: 30px;
   padding-bottom: 22px;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    content: " ";
+    background-color: #68b738;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 22px;
+    top: 24px;
+  }
+
+  &:nth-child(1)::after {
+    position: absolute;
+    content: " ";
+    background-image: url("../img/cat-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 36px;
+    height: 50px;
+    left: 29px;
+    top: 21px;
+    z-index: 1;
+  }
+
+  &:nth-child(2)::after {
+    position: absolute;
+    content: " ";
+    background-image: url("../img/cat-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 67px;
+    height: 28px;
+    left: 9px;
+    top: 35px;
+    z-index: 1;
   }
 }
 
@@ -37,6 +75,7 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 29px;
+  padding-left: 59px;
 }
 
 .program-type__description {
@@ -53,6 +92,24 @@
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  padding-right: 57px;
+  position: relative;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:active .program-type__navigation-icon {
+    fill: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.program-type__navigation-icon {
+  position: absolute;
+  right: 0;
+  fill: #000000;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (min-width: @tablet-width) {
@@ -73,12 +130,39 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      left: 70%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(1)::after {
+      width: 140px;
+      height: 194px;
+      left: 74%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    &:nth-child(2)::after {
+      width: 268px;
+      height: 112px;
+      left: 65%; // я так понимаю, что размер свг не изменить так, нужно вставлять везде свг разного размера?
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
   }
 
   .program-type__header {
     font-size: 36px;
     line-height: 100%;
     margin-bottom: 24px;
+    padding-left: 0;
   }
 
   .program-type__description {
@@ -115,6 +199,31 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      left: 52px;
+      top: 100px;
+    }
+
+    &:nth-child(1)::after {
+      width: 70px;
+      height: 97px;
+      left: 67px;
+      top: 100px;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    &:nth-child(2)::after {
+      width: 134px;
+      height: 56px;
+      left: 32px; // я так понимаю, что размер свг не изменить так, нужно вставлять везде свг разного размера?
+      top: 100px;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
   }
 
   .program-type__header {
@@ -122,6 +231,7 @@
     line-height: 100%;
     margin-bottom: 73px;
     align-self: center;
+    padding-left: 0;
   }
 
   .program-type__description {

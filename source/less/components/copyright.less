@@ -1,6 +1,10 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+
+  &:active .copyright__link {
+    opacity: 0.5;
+  }
 }
 
 .copyright__link {
@@ -9,6 +13,18 @@
   color: #444444;
   font-size: 16px;
   line-height: 18px;
+
+  &:hover + .copyright__link .copyright__navigation-icon {
+    fill: #68b738;
+  }
+
+  &:hover .copyright__navigation-icon {
+    fill: #68b738;
+  }
+}
+
+.copyright__navigation-icon {
+  fill: #666666;
 }
 
 @media (min-width: @tablet-width) {
