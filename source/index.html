@@ -3,6 +3,10 @@
 
 <head>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" href="../favicon.ico/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-icon-180x180.png">
+  <link rel="manifest" href="../favicon.ico/manifest.json">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
@@ -11,8 +15,14 @@
 <body class="page__body">
   <header class="page-header page-header--cat-bg">
     <div class="page-header__logo-wrapper">
-      <a class="page-header__logo" href="#"> <img class="page-header__logo-image" src="img/logo-mobile.svg"
-          width="34" height="38" alt="Логотип компании"></a>
+      <a class="page-header__logo" href="#">
+        <picture>
+        <source media="(min-width:1200px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg"
+          width="34" height="38" alt="Логотип компании">
+          </picture>
+        </a>
       <a class="page-header__logo" href="#"> <img class="page-header__logo-text" src="img/text-logo.svg"
           width="101" height="18" alt="Cat Energy"></a>
         </div>
@@ -53,6 +63,7 @@
         <h2 class="go-to-form_header"> Функциональное питание для котов </h2>
         <p class="go-to-form__slogan"> Занялся собой? Займись котом! </p>
       </div>
+      <div class="go-to-form__busket-bg"> </div>
       <a class="go-to-form__button button" href="form.html"> Подобрать программу </a>
     </section>
 
@@ -64,14 +75,14 @@
             <h3 class="program-type__header"> Похудение </h3>
             <p class="program-type__description"> Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес. </p>
-            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="24" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог slim </a>
+            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="24" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke" stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог slim </a>
           </li>
 
           <li class="program-type__item">
             <h3 class="program-type__header"> Набор массы </h3>
             <p class="program-type__description"> Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы! </p>
-            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="24" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог pro </a>
+            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="24" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke"  stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог pro </a>
           </li>
         </ul>
       </div>
@@ -126,8 +137,18 @@
         </div>
 
         <div class="client-example__animation">
-          <img class="client-example__picture picture-before" src="#" width="280" height="232" alt="Кот до">
-          <img class="client-example__picture picture-after" src="#" width="280" height="232" alt="Кот после">
+        <div class="client-example__animation-wrapper">
+          <picture>
+          <source media="(min-width: 1200px)" srcset="img/cat-fat-desktop.png 1x, img/cat-fat-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/cat-fat-tablet.png 1x, img/cat-fat-tablet@2x 2x">
+          <img class="client-example__picture picture-before" src="img/cat-fat-mobile.png" srcset="img/before-mobile@2x.png" alt="Кот до">
+          </picture>
+          <picture>
+          <source media="(min-width: 1200px)" srcset="img/cat-skinny-desktop.png 1x, img/cat-skinny-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/cat-skinny-tablet.png 1x, img/cat-skinny-tablet@2x.png 2x">
+          <img class="client-example__picture picture-after" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png" alt="Кот после">
+          </picture>
+          </div>
           <nav class="client-example__navigation">
             <button class="client-example__button before-button" type="button"> Было </button>
             <button class="client-example__button after-button" type="button"> Стало </button>

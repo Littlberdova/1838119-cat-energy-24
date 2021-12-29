@@ -95,6 +95,10 @@
   padding-right: 57px;
   position: relative;
 
+  &:hover .program-type__navigation-icon .program-type_nav-stroke {
+    width: 26px;
+  }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -102,6 +106,12 @@
   &:active .program-type__navigation-icon {
     fill: rgba(0, 0, 0, 0.3);
   }
+
+  &:active .program-type__navigation-icon .program-type_nav-stroke {
+    stroke: rgba(0, 0, 0, 0.3);
+  }
+
+
 }
 
 .program-type__navigation-icon {
@@ -110,6 +120,10 @@
   fill: #000000;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.program-type_nav-stroke {
+  stroke: #000000;
 }
 
 @media (min-width: @tablet-width) {
