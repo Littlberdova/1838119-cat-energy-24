@@ -2,11 +2,11 @@
 <html class="page" lang="ru">
 
 <head>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="../favicon.ico">
-  <link rel="icon" href="../favicon.ico/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-icon-180x180.png">
-  <link rel="manifest" href="../favicon.ico/manifest.json">
+  <link rel="icon" href="../source/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../source/img/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="../manifest.webmanifest">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
@@ -75,14 +75,14 @@
             <h3 class="program-type__header"> Похудение </h3>
             <p class="program-type__description"> Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес. </p>
-            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="24" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke" stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог slim </a>
+            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="30" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke" stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог slim </a>
           </li>
 
           <li class="program-type__item">
             <h3 class="program-type__header"> Набор массы </h3>
             <p class="program-type__description"> Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы! </p>
-            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="24" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke"  stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог pro </a>
+            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="30" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke"  stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог pro </a>
           </li>
         </ul>
       </div>
@@ -130,8 +130,8 @@
               <td class="client-example__numbers-data"> 60 ДНЕЙ </td>
             </tr>
             <tr class="client-example__numbers-row">
-              <td class="client-example__numbers-name"> снижение веса</td>
-              <td class="client-example__numbers-name"> затрачено времени</td>
+              <td class="client-example__numbers-name"> снижение <br> веса</td>
+              <td class="client-example__numbers-name"> затрачено <br> времени</td>
             </tr>
           </table>
         </div>
@@ -139,11 +139,17 @@
         <div class="client-example__animation">
         <div class="client-example__animation-wrapper">
           <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/cat-fat-desktop.webp 1x, img/cat-fat-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat-tablet.webp 1x, img/cat-fat-tablet@2x.webp 2x">
+          <source type="image/webp" src="img/cat-fat-mobile.webp 1x, img/before-mobile@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/cat-fat-desktop.png 1x, img/cat-fat-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/cat-fat-tablet.png 1x, img/cat-fat-tablet@2x 2x">
+          <source media="(min-width: 768px)" srcset="img/cat-fat-tablet.png 1x, img/cat-fat-tablet@2x.png 2x">
           <img class="client-example__picture picture-before" src="img/cat-fat-mobile.png" srcset="img/before-mobile@2x.png" alt="Кот до">
           </picture>
           <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/cat-skinny-desktop.webp 1x, img/cat-skinny-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny-tablet.webp 1x, img/cat-skinny-tablet@2x.webp 2x">
+          <source type="image/webp" src="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/cat-skinny-desktop.png 1x, img/cat-skinny-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/cat-skinny-tablet.png 1x, img/cat-skinny-tablet@2x.png 2x">
           <img class="client-example__picture picture-after" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png" alt="Кот после">
@@ -151,6 +157,9 @@
           </div>
           <nav class="client-example__navigation">
             <button class="client-example__button before-button" type="button"> Было </button>
+            <div class="client-example__range-bar">
+              <button class="client-example__range-toggle" type="button"> <span class="visually-hidden"> Изменить состояние кота </span></button>
+            </div>
             <button class="client-example__button after-button" type="button"> Стало </button>
           </nav>
         </div>

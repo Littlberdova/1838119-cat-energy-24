@@ -31,7 +31,7 @@
   font-display: swap;
 }
 
-.font-face {
+@font-face {
   font-family: "Glyphter", sans-serif;
   src: url("../fonts/glyphter/Glyphter.eot");
   src: url("../fonts/glyphter/Glyphter.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphter/Glyphter.woff") format("woff"), url("../fonts/glyphter/Glyphter.ttf") format("truetype"), url("../fonts/glyphter/Glyphter.svg#Glyphter") format("svg");
@@ -55,7 +55,7 @@
   min-height: 100%;
   min-width: 320px;
   background-color: @bg-color;
-  font-family: @base-font-family;
+  font-family: "Arial", sans-serif;
   font-weight: @base-font-weight;
   font-size: @base-font-size;
   line-height: @base-line-height;
@@ -87,6 +87,11 @@
 
   &:hover {
     background-color: #5eaa2f;
+  }
+
+  &:focus-visible {
+    background-color: #5eaa2f;
+    outline: none;
   }
 
   &:active {

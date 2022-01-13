@@ -96,7 +96,15 @@
   position: relative;
 
   &:hover .program-type__navigation-icon .program-type_nav-stroke {
-    width: 26px;
+    transform: scaleX(2);
+  }
+
+  &:hover .program-type__navigation-icon .program-type__triangle {
+    transform: translateX(5px);
+  }
+
+  &:hover .program-type__navigation-icon {
+    right: 8px;
   }
 
   &:active {
@@ -110,8 +118,6 @@
   &:active .program-type__navigation-icon .program-type_nav-stroke {
     stroke: rgba(0, 0, 0, 0.3);
   }
-
-
 }
 
 .program-type__navigation-icon {
@@ -148,7 +154,7 @@
     &::before {
       width: 200px;
       height: 200px;
-      left: 70%;
+      left: 65%;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -156,18 +162,18 @@
     &:nth-child(1)::after {
       width: 140px;
       height: 194px;
-      left: 74%;
-      top: 50%;
-      transform: translateY(-50%);
+      left: 78%;
+      top: 46%;
+      transform: translate(-50%, -50%) scale(4);
       z-index: 1;
     }
 
     &:nth-child(2)::after {
       width: 268px;
       height: 112px;
-      left: 65%; // я так понимаю, что размер свг не изменить так, нужно вставлять везде свг разного размера?
+      left: 77%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%) scale(4);
       z-index: 1;
     }
   }
@@ -224,18 +230,18 @@
     &:nth-child(1)::after {
       width: 70px;
       height: 97px;
-      left: 67px;
-      top: 100px;
-      transform: translateY(-50%);
+      left: 97px;
+      top: 92px;
+      transform: translate(-50%, -50%) scale(2);
       z-index: 1;
     }
 
     &:nth-child(2)::after {
       width: 134px;
       height: 56px;
-      left: 32px; // я так понимаю, что размер свг не изменить так, нужно вставлять везде свг разного размера?
+      left: 100px;
       top: 100px;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%) scale(2);
       z-index: 1;
     }
   }
