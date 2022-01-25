@@ -4,6 +4,23 @@
   padding: 0;
 }
 
+.catalog__picture-wrapper {
+  display: flex;
+  align-items: center;
+  width: 84px;
+  height: 100px;
+}
+
+.catalog__picture {
+  width: 68px;
+  height: 86px;
+}
+
+.catalog__picture-big {
+  width: 84px;
+  height: 100px;
+}
+
 .catalog__list {
   padding: 0;
   margin: 0;
@@ -43,11 +60,15 @@
   line-height: 20px;
   margin: 0;
   margin-bottom: 18px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .catalog__product-numbers {
   font-size: 12px;
   line-height: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__diversity-note {
@@ -86,6 +107,24 @@
     padding-right: 30px;
   }
 
+  .catalog__picture-wrapper {
+    display: flex;
+    align-items: flex-end;
+    width: 168px;
+    height: 206px;
+    margin-bottom: 34px;
+  }
+
+  .catalog__picture {
+    width: 161px;
+    height: 172px;
+  }
+
+  .catalog__picture-big {
+    width: 168px;
+    height: 206px;
+  }
+
   .catalog__list {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -94,8 +133,8 @@
 
   .catalog__item {
     padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 39px;
+    padding-right: 42px;
+    padding-top: 14px;
     padding-bottom: 39px;
     justify-content: space-between;
     border: 2px solid #f2f2f2;
@@ -110,7 +149,12 @@
   .catalog__card-wrapper {
     grid-template-columns: 1fr;
     justify-items: center;
-    margin-top: -86px;
+    margin-top: -117px;
+  }
+
+  .catalog__product-information-wrapper {
+    margin-bottom: 43px;
+    align-items: center;
   }
 
   .catalog__product-name {
@@ -118,11 +162,24 @@
     line-height: 24px;
     margin: 0;
     margin-bottom: 21px;
+    width: 131px;
   }
 
   .catalog__product-numbers {
     font-size: 16px;
     line-height: 16px;
+    row-gap: 30px;
+    column-gap: 66px;
+    margin: 0;
+    width: 252px;
+
+    & div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #cdcdcd;
+    }
   }
 
   .catalog__diversity-note {
@@ -145,7 +202,7 @@
   .catalog__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 144px;
+    row-gap: 145px;
   }
 
   .catalog__item {
@@ -163,5 +220,9 @@
   .catalog__product-name {
     font-size: 20px;
     line-height: 21px;
+  }
+
+  .catalog__product-numbers {
+    width: 180px;
   }
 }

@@ -3,6 +3,14 @@
   flex-direction: column;
 }
 
+.owner-contacts__name {
+  width: 187px;
+}
+
+.owner-contacts__input {
+  width: 100%;
+}
+
 .owner-contacts__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -23,6 +31,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .owner-contacts__name {
+    width: 512px;
+    background: linear-gradient(to right, transparent 14%, #ffffff 14%);
+  }
+
   .owner-contacts__list {
     padding-top: 76px;
     padding-bottom: 65px;
@@ -36,7 +49,7 @@
 @media (min-width: @desktop-width) {
   .owner-contacts__list {
     padding-top: 76px;
-    padding-bottom: 69px;
+    padding-bottom: 68px;
     grid-template-columns: 1fr 1fr;
     column-gap: 78px;
   }

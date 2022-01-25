@@ -1,5 +1,5 @@
 .present__wrapper {
-  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-cat-background.png");
+  background-image: url("../img/catalog-cat-background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -9,6 +9,25 @@
   padding-right: 61px;
   height: 289px;
   box-sizing: border-box;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: " ";
+    background-image: url(../img/icon_gift.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 78px;
+    height: 80px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/catalog-cat-background@2x.png") no-repeat center;
+    background-size: cover;
+  }
 }
 
 
@@ -27,6 +46,18 @@
     padding-left: 442px;
     padding-right: 124px;
     height: 200px;
+    background-image: url("../img/catalog-cat-background-tablet.png");
+
+    &::after {
+      top: 50%;
+      left: 11%;
+      transform: translateY(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/catalog-cat-background-tablet@2x.png") no-repeat center;
+      background-size: cover;
+    }
   }
 
   .present__description {
@@ -42,5 +73,20 @@
     padding-right: 43px;
     height: 100%;
     width: 245px;
+    background-image: url("../img/catalog-cat-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &::after {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/catalog-cat-background@2x.png") no-repeat center;
+    background-size: cover;
   }
 }
