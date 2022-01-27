@@ -15,7 +15,7 @@
 .form__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400px;
-  font-size: 36px;
+  font-size: 33px;
   line-height: 100%;
   margin: 0;
 }
@@ -24,6 +24,7 @@
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 32px;
 }
 
 .form__notion {
@@ -48,6 +49,24 @@
   padding: 0;
 }
 
+.form_full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.form__line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background: #68b738;
+}
+
 .form__group-name {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -55,13 +74,17 @@
   line-height: 26px;
   color: #000000;
   padding: 0;
+  padding-right: 23px;
+  padding-left: 20px;
   position: relative;
+  background-color: #ffffff;
 }
 
 .form__group-item {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: baseline;
 
   &:not(:last-child) {
     margin-bottom: 14px;
@@ -84,13 +107,19 @@
 }
 
 .form__input {
-  width: 100%;
-  flex-grow: 2;
+  width: 55%;
+  flex-grow: 1;
   box-sizing: border-box;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 34px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
 
   &:focus-visible {
     border-color: #444444;
@@ -98,12 +127,22 @@
   }
 
   &:focus-visible ~ .form__navigation-icon {
-    fill: #68b738; //Очень странное окрашивание иконок, хотя я удалила fill  у  path
+    stroke: #68b738; //Очень странное окрашивание иконок, хотя я удалила fill  у  path
   }
 }
 
 .form__text-input {
-  width: 100%;
+  width: 89%;
+  margin-top: 38px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  white-space: nowrap;
+  height: 129px;
 
   &::placeholder {
     font-family: "Oswald", sans-serif;
@@ -135,20 +174,21 @@
 }
 
 .form__button {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 16px;
 }
 
 @media (min-width: @tablet-width) {
   .form__header {
-    padding-top: 65px;
+    padding-top: 36px;
     padding-bottom: 54px;
     padding-left: 70px;
     padding-right: 70px;
   }
 
   .form__title {
-    font-size: 60px;
+    font-size: 56px;
   }
 
   .form__wrapper {
@@ -172,6 +212,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
 
     &:not(:last-child) {
       margin-bottom: 14px;
@@ -181,9 +222,19 @@
   .form__label {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 16px;
+  }
+
+  .form__input {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .form__text-input {
+    margin-top: 76px;
+    width: 95%;
+    height: 153px;
+
     &::placeholder {
       font-size: 20px;
       line-height: 30px;
@@ -201,8 +252,8 @@
   }
 
   .form__button {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -214,7 +265,7 @@
   }
 
   .form__header {
-    padding-top: 73px;
+    padding-top: 46px;
     padding-bottom: 56px;
     padding-left: 110px;
     padding-right: 110px;
@@ -224,5 +275,9 @@
     padding-left: 110px;
     padding-right: 110px;
     padding-bottom: 82px;
+  }
+
+  .form__group-name {
+    padding-left: 110px;
   }
 }

@@ -33,6 +33,11 @@
     color: rgba(0, 0, 0, 0.5);
   }
 
+  &:focus-visible {
+    color: rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -63,9 +68,9 @@
     background-color: #68b738;
     position: absolute;
     height: 2px;
-    left: 0;
-    right: 0;
+    width: 100%;
     bottom: 0;
+    left: 0;
   }
 
   .site-list__link {
@@ -89,8 +94,8 @@
     position: absolute;
     height: 2px;
     left: 0;
-    right: 0;
     bottom: 0;
+    width: 100%;
   }
 
   .site-list__link {
@@ -103,6 +108,11 @@
 
     &:hover {
       color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus-visible {
+      color: rgba(255, 255, 255, 0.5);
+      outline: none;
     }
 
     &:active {

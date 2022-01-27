@@ -1,18 +1,33 @@
 .comments {
-  padding-top: 37px;
+  padding-top: 7px;
   padding-bottom: 23px;
+}
+
+.comments__name {
+  width: 121px;
 }
 
 @media (min-width: @tablet-width) {
   .comments {
-    padding-top: 76px;
+    padding-top: 4px;
     padding-bottom: 65px;
+  }
+
+  .comments__name {
+    width: 182px;
+    background: linear-gradient(to right, transparent 13%, #ffffff 13%);
+    padding-left: 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .comments {
-    padding-top: 76px;
+    padding-top: 0;
     padding-bottom: 67px;
+  }
+
+  .comments__name {
+    padding-left: 110px;
+    background: linear-gradient(to right, transparent 22%, #ffffff 22%);
   }
 }

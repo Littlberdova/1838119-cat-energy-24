@@ -3,6 +3,9 @@
   border: none;
   cursor: pointer;
   position: relative;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
 }
 
 .button-show-more::before,
@@ -27,9 +30,15 @@
 .button-show-all {
   background-color: #f2f2f2;
   color: rgba(68, 68, 68, 1);
+  margin-top: 21px;
 
   &:hover {
     background-color: #ebebeb;
+  }
+
+  &:focus-visible {
+    background-color: #ebebeb;
+    outline: none;
   }
 
   &:active {
@@ -39,6 +48,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .button-show-more {
+    width: 60px;
+    height: 60px;
+  }
+
   .button-show-more::before,
   .button-show-more::after {
     width: 60px;

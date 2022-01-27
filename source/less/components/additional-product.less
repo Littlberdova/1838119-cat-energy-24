@@ -5,6 +5,14 @@
   grid-template-columns: 1fr;
 }
 
+.additional-product__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.additional-product__name {
+  width: 141px;
+}
+
 .additional-product__label {
   position: relative;
   padding-left: 45px;
@@ -24,36 +32,61 @@
 
 .additional-product__control-input:checked ~ .additional-product__label .additional-product__control-mark::after {
   position: absolute;
-  content: "\0041";
-  display: inline-block;
-  font-family: "Glyphter", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #68b738;
-  left: 10px;
+  content: " ";
+  background-image: url("../../img/select-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 14px;
+  left: 7px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.additional-product__control-input:focus-visible ~ .additional-product__label .additional-product__control-mark::before {
+  border-color: #bababa;
+}
+
+.additional-product__control-input--disabled ~ .additional-product__label {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .additional-product__list {
-    padding-top: 57px;
+    padding-top: 59px;
     padding-bottom: 61px;
     grid-template-columns: 1fr 1fr;
-    row-gap: 32px;
-    column-gap: 123px;
+    row-gap: 41px;
+    column-gap: 61px;
+  }
+
+  .additional-product__item:not(:last-child) {
+    margin: 0;
+  }
+
+  .additional-product__name {
+    width: 211px;
+    background: linear-gradient(to right, transparent 14%, #ffffff 14%);
+    padding-left: 70px;
   }
 
   .additional-product__label {
     padding-left: 59px;
+
+    &:hover .additional-product__control-mark::before {
+      border-color: #bababa;
+    }
   }
 
   .additional-product__control-mark::before {
     width: 40px;
     height: 40px;
+  }
+
+  .additional-product__control-input:checked ~ .additional-product__label .additional-product__control-mark::after {
+    width: 24px;
+    height: 18px;
+    left: 10px;
   }
 }
 
@@ -62,7 +95,7 @@
   .additional-product__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 32px;
-    column-gap: 104px;
+    column-gap: 80px;
   }
 
   .additional-product__item {
@@ -72,5 +105,10 @@
   .additional-product__control-mark::before {
     width: 40px;
     height: 40px;
+  }
+
+  .additional-product__name {
+    padding-left: 110px;
+    background: linear-gradient(to right, transparent 20%, #ffffff 20%);
   }
 }

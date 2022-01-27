@@ -26,7 +26,7 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   &::before {
@@ -75,12 +75,12 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 29px;
-  padding-left: 59px;
+  padding-left: 69px;
 }
 
 .program-type__description {
   margin-top: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .program-type__link {
@@ -92,11 +92,19 @@
   text-decoration: none;
   color: #000000;
   cursor: pointer;
-  padding-right: 57px;
+  padding-right: 45px;
   position: relative;
 
   &:hover .program-type__navigation-icon .program-type_nav-stroke {
-    width: 26px;
+    transform: scaleX(2);
+  }
+
+  &:hover .program-type__navigation-icon .program-type__triangle {
+    transform: translateX(5px);
+  }
+
+  &:hover .program-type__navigation-icon {
+    right: 8px;
   }
 
   &:active {
@@ -110,8 +118,6 @@
   &:active .program-type__navigation-icon .program-type_nav-stroke {
     stroke: rgba(0, 0, 0, 0.3);
   }
-
-
 }
 
 .program-type__navigation-icon {
@@ -127,15 +133,19 @@
 }
 
 @media (min-width: @tablet-width) {
+  .program-type {
+    margin-bottom: 45px;
+  }
+
   .program-type__wrapper {
     padding-left: 30px;
     padding-right: 30px;
   }
 
   .program-type__item {
-    padding-left: 52px;
-    padding-right: 52px;
-    padding-top: 77px;
+    padding-left: 54px;
+    padding-right: 61px;
+    padding-top: 76px;
     padding-bottom: 57px;
     display: flex;
     flex-direction: column;
@@ -148,7 +158,7 @@
     &::before {
       width: 200px;
       height: 200px;
-      left: 70%;
+      left: 63%;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -156,18 +166,18 @@
     &:nth-child(1)::after {
       width: 140px;
       height: 194px;
-      left: 74%;
-      top: 50%;
-      transform: translateY(-50%);
+      left: 78%;
+      top: 46%;
+      transform: translate(-50%, -50%) scale(4);
       z-index: 1;
     }
 
     &:nth-child(2)::after {
       width: 268px;
       height: 112px;
-      left: 65%; // я так понимаю, что размер свг не изменить так, нужно вставлять везде свг разного размера?
+      left: 77%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%) scale(4);
       z-index: 1;
     }
   }
@@ -175,13 +185,15 @@
   .program-type__header {
     font-size: 36px;
     line-height: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     padding-left: 0;
   }
 
   .program-type__description {
-    margin-bottom: 48px;
+    margin-bottom: 58px;
     width: 340px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .program-type__link {
@@ -224,26 +236,31 @@
     &:nth-child(1)::after {
       width: 70px;
       height: 97px;
-      left: 67px;
-      top: 100px;
-      transform: translateY(-50%);
+      left: 97px;
+      top: 92px;
+      transform: translate(-50%, -50%) scale(2);
       z-index: 1;
     }
 
     &:nth-child(2)::after {
       width: 134px;
       height: 56px;
-      left: 32px; // я так понимаю, что размер свг не изменить так, нужно вставлять везде свг разного размера?
+      left: 100px;
       top: 100px;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%) scale(2);
       z-index: 1;
+    }
+
+    &:nth-child(2) .program-type__header {
+      margin-left: 58px;
     }
   }
 
   .program-type__header {
     font-size: 36px;
     line-height: 100%;
-    margin-bottom: 73px;
+    margin-bottom: 82px;
+    margin-left: 28px;
     align-self: center;
     padding-left: 0;
   }
