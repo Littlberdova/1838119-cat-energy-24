@@ -71,6 +71,7 @@ export const styles = () => {
 //  .pipe(svgstore({inlineSVG:true}))
 //  .pipe(rename('sprite.svg'))
 //  .pipe(gulp.dest('build/img'));
+//
 
 
 
