@@ -15,7 +15,7 @@
 .form__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400px;
-  font-size: 36px;
+  font-size: 33px;
   line-height: 100%;
   margin: 0;
 }
@@ -24,6 +24,7 @@
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 32px;
 }
 
 .form__notion {
@@ -83,6 +84,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: baseline;
 
   &:not(:last-child) {
     margin-bottom: 14px;
@@ -105,11 +107,11 @@
 }
 
 .form__input {
-  width: 70%;
+  width: 55%;
   flex-grow: 1;
   box-sizing: border-box;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 34px;
   font-family: "Oswald", sans-serif;
@@ -125,12 +127,12 @@
   }
 
   &:focus-visible ~ .form__navigation-icon {
-    fill: #68b738; //Очень странное окрашивание иконок, хотя я удалила fill  у  path
+    stroke: #68b738; //Очень странное окрашивание иконок, хотя я удалила fill  у  path
   }
 }
 
 .form__text-input {
-  width: 97%;
+  width: 89%;
   margin-top: 38px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -139,6 +141,8 @@
   color: #444444;
   text-transform: uppercase;
   padding: 10px 15px;
+  white-space: nowrap;
+  height: 129px;
 
   &::placeholder {
     font-family: "Oswald", sans-serif;
@@ -170,13 +174,14 @@
 }
 
 .form__button {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 16px;
 }
 
 @media (min-width: @tablet-width) {
   .form__header {
-    padding-top: 65px;
+    padding-top: 36px;
     padding-bottom: 54px;
     padding-left: 70px;
     padding-right: 70px;
@@ -220,8 +225,15 @@
     margin-right: 16px;
   }
 
+  .form__input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   .form__text-input {
     margin-top: 76px;
+    width: 95%;
+    height: 153px;
 
     &::placeholder {
       font-size: 20px;
@@ -240,8 +252,8 @@
   }
 
   .form__button {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 20px;
     line-height: 20px;
   }

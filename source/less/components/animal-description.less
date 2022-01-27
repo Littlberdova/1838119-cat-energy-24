@@ -50,8 +50,12 @@
   margin-bottom: 27px;
 
   .animal-description__list .animal-description__item:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 20px;
   }
+}
+
+.animal-description__item label {
+  margin-right: 10px;
 }
 
 .animal-description .animal-description__group:nth-child(2) {
@@ -61,7 +65,7 @@
   padding: 22px 0;
 
   .animal-description__list .animal-description__item:not(:last-child) {
-    margin-bottom: 19px;
+    margin-bottom: 27px;
   }
 }
 
@@ -69,19 +73,40 @@
   .animal-description {
     padding-top: 66px;
     padding-bottom: 71px;
+
+    & label {
+      margin-right: 19px;
+    }
   }
 
   .animal-description .animal-description__group:first-child {
     margin-bottom: 72px;
 
     .animal-description__list .animal-description__item:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 29px;
     }
   }
 
   .animal-description .animal-description__group:nth-child(2) {
     border: 1px solid #e7e7e7;
     padding: 25px 27px;
+  }
+
+  .animal-description__control-mark::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .animal-description__label {
+    padding-left: 60px;
+  }
+
+  .animal-description__control-input:checked ~ .animal-description__label .animal-description__control-mark::after {
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -113,9 +138,6 @@
 
   .animal-description .animal-description__group:nth-child(2) {
     padding: 30px 28px;
-  }
-
-  .animal-description .animal-description__group:nth-child(2) {
 
     .animal-description__list .animal-description__item:not(:last-child) {
       margin-bottom: 24px;

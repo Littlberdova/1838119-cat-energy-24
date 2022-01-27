@@ -1,6 +1,6 @@
 .client-example__wrapper {
   width: auto;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
@@ -12,7 +12,7 @@
 .client-example__header {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 29px;
   line-height: 40px;
   margin-bottom: 40px;
 
@@ -36,7 +36,7 @@
   justify-content: space-between;
   min-width: 280px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .client-example__numbers-row {
@@ -188,7 +188,7 @@
 
 @media (min-width: @tablet-width) {
   .client-example__wrapper {
-    padding-top: 43px;
+    padding-top: 97px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 56px;
@@ -196,7 +196,7 @@
   }
 
   .client-example__header {
-    font-size: 60px;
+    font-size: 48px;
     line-height: 60px;
     margin-bottom: 63px;
   }
@@ -205,14 +205,25 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
+    width: 677px;
   }
 
   .client-example__history {
-    margin-bottom: 576px;
+    margin-bottom: 597px;
   }
 
   .client-example__container {
     width: 366px;
+  }
+
+  .client-example__numbers-row:first-child {
+    padding-right: 56px;
+    padding-left: 56px;
+  }
+
+  .client-example__numbers-row:last-child {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .client-example__numbers {
@@ -220,14 +231,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
   }
 
   .client-example__numbers-summary {
     width: 174px;
     text-align: end;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 35px;
     text-transform: uppercase;
     order: 2;
     margin: 0;

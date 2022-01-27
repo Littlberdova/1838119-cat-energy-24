@@ -65,13 +65,13 @@ export const styles = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-export const sprite = () => {
-  return gulp.src('source/img/social/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({inlineSVG:true}))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
-}
+//export const sprite = () => {
+//  return gulp.src('source/img/social/*.svg')
+//  .pipe(svgo())
+//  .pipe(svgstore({inlineSVG:true}))
+//  .pipe(rename('sprite.svg'))
+//  .pipe(gulp.dest('build/img'));
+
 
 
 //Copy
@@ -124,7 +124,6 @@ export const build = gulp.series(
     styles,
     html,
     optimizesvg,
-    sprite,
     createWebp
   ),
 );
@@ -139,7 +138,6 @@ export default gulp.series(
     styles,
     html,
     optimizesvg,
-    sprite,
     createWebp
   ),
   gulp.series(
