@@ -10,8 +10,9 @@
   justify-content: center;
 }
 
-.social__item:not(:last-child) {
+.social__item {
   margin-right: 25px;
+  position: relative;
 
   & .social-link {
     display: block;
@@ -38,9 +39,12 @@
 }
 
 .social__item:last-child {
+  margin-right: 0;
+
   & .social-link {
     &:hover .social__navigation-icon {
       stroke: rgba(104, 183, 56, 1);
+      fill: none;
     }
 
     &:focus-visible {
@@ -49,10 +53,12 @@
 
     &:focus-visible .social__navigation-icon {
       stroke: rgba(104, 183, 56, 1);
+      fill: none;
     }
 
     &:active .social__navigation-icon {
       stroke: rgba(104, 183, 56, 0.3);
+      fill: none;
     }
   }
 }
@@ -60,11 +66,9 @@
 
 .social__navigation-icon {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto auto;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
 }
 
 
@@ -73,10 +77,12 @@
     border: none;
     justify-content: center;
     width: 171px;
+    padding-left: 35px;
   }
 
-  .social-link {
+  .social__item .social-link {
     height: 40px;
+    width: 40px;
     position: relative;
   }
 }

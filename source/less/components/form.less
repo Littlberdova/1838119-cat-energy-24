@@ -120,6 +120,11 @@
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
 
   &:focus-visible {
     border-color: #444444;
@@ -127,13 +132,13 @@
   }
 
   &:focus-visible ~ .form__navigation-icon {
-    stroke: #68b738; //Очень странное окрашивание иконок, хотя я удалила fill  у  path
+    stroke: #68b738;
   }
 }
 
 .form__text-input {
   width: 89%;
-  margin-top: 38px;
+  margin-top: 10px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -143,6 +148,7 @@
   padding: 10px 15px;
   white-space: nowrap;
   height: 129px;
+  border: 1px solid #e7e7e7;
 
   &::placeholder {
     font-family: "Oswald", sans-serif;
@@ -151,6 +157,10 @@
     line-height: 18px;
     color: #444444;
     text-transform: uppercase;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
   }
 
   &:focus-visible {
@@ -231,7 +241,7 @@
   }
 
   .form__text-input {
-    margin-top: 76px;
+    margin-top: 37px;
     width: 95%;
     height: 153px;
 
@@ -279,5 +289,10 @@
 
   .form__group-name {
     padding-left: 110px;
+  }
+
+  .form__text-input {
+    margin-top: 38px;
+    width: 97%;
   }
 }
