@@ -9,6 +9,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="img/index-background-desktop.png" as="image">
+  <link rel="preload" href="img/index-background-desktop@2x.png" as="image">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
@@ -17,7 +19,7 @@
 <body class="page__body">
   <header class="page-header page-header--cat-bg">
     <div class="page-header__logo-wrapper">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo" href="#" aria-label="Логотип компании">
         <picture>
         <source media="(min-width:1200px)" srcset="img/logo-desktop.svg">
         <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
@@ -25,7 +27,7 @@
           width="34" height="38" alt="Логотип компании">
           </picture>
         </a>
-      <a class="page-header__logo" href="#"> <img class="page-header__logo-text" src="img/text-logo.svg"
+      <a class="page-header__logo" href="#" aria-label="Логотип компании"> <img class="page-header__logo-text" src="img/text-logo.svg"
           width="101" height="18" alt="Cat Energy"></a>
         </div>
         <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -40,32 +42,24 @@
     </nav>
   </header>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
-
   <main class="page-main">
     <h1 class="visually-hidden"> Компания "Cat Energy"</h1>
     <section class="go-to-form">
       <h2 class="visually-hidden"> Переход к анкете "Подбор программы" </h2>
       <div class="go-to-form__wrapper">
-        <h2 class="go-to-form_header"> Функциональное питание для котов </h2>
+        <h2 class="go-to-form__header"> Функциональное питание для котов </h2>
         <p class="go-to-form__slogan"> Занялся собой? Займись котом! </p>
       </div>
-      <div class="go-to-form__busket-bg"> </div>
+      <div class="go-to-form__busket-bg">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/ndex-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/ndex-can-tablet@2x.png 2x">
+          <img class="go-to-form__busket-img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png" alt="Пример продукта">
+        </picture>
+      </div>
       <a class="go-to-form__button button" href="form.html"> Подобрать программу </a>
     </section>
 
@@ -77,14 +71,14 @@
             <h3 class="program-type__header"> Похудение </h3>
             <p class="program-type__description"> Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес. </p>
-            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="30" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke" stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог slim </a>
+            <a class="program-type__link" href="#" aria-label="Перейти к разделу каталога"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="30" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type__nav-stroke" stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог slim </a>
           </li>
 
           <li class="program-type__item">
             <h3 class="program-type__header"> Набор массы </h3>
             <p class="program-type__description"> Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы! </p>
-            <a class="program-type__link" href="#"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="30" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type_nav-stroke"  stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог pro </a>
+            <a class="program-type__link" href="#" aria-label="Перейти к разделу каталога"> <svg class="program-type__navigation-icon" aria-hidden="true" focusable="false" width="30" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="program-type__nav-stroke"  stroke-width="2" d="M0 6h18"/><path class="program-type__triangle" d="m24 6-6.75 5.2V.8L24 6Z"/></svg> Каталог pro </a>
           </li>
         </ul>
       </div>
@@ -181,7 +175,7 @@
       <div class="address__map-wrapper map-wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.167342576136!2d30.31972967745924!3d59.93905025206773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1637990218770!5m2!1sru!2sru"
-          width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" aria-label="Взаимодействовать с картой"></iframe>
       </div>
     </section>
   </main>
@@ -189,10 +183,9 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo" href="#"> <img class="page-footer__logo-text" src="img/text-logo.svg"
+        <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу"> <img class="page-footer__logo-text" src="img/text-logo.svg"
             width="128" height="24" alt="Cat Energy"></a>
       </div>
-
 
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -207,10 +200,32 @@
 
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"> <svg class="copyright__navigation-icon" aria-hidden="true" focusable="false" width="27" height="34" fill="none"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/></svg> </a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт HTML Академии"> <svg class="copyright__navigation-icon" aria-hidden="true" focusable="false" width="27" height="34" fill="none"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/></svg> </a>
       </div>
     </div>
   </footer>
-</body>
 
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    if (navMain.classList.contains('main-nav--opened')) {
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+    }
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--opened')) {
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+      } else {
+        navMain.classList.add('main-nav--opened');
+        navMain.classList.remove('main-nav--closed');
+      }
+    });
+  </script>
+
+</body>
 </html>

@@ -29,68 +29,67 @@ export const styles = () => {
 
 //Html
 
- const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
-
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build'));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 // Images
 
- const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(squoosh())
-  .pipe(gulp.dest('build/img'));
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
 }
 
- const copyimages = () => {
+const copyimages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img'));
 }
 
 //WebP
 
- const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(squoosh({webp: {},}))
-  .pipe(gulp.dest('build/img'));
+    .pipe(squoosh({webp: {},}))
+    .pipe(gulp.dest('build/img'));
 }
 
 //SVG
 
- const optimizesvg = () => {
+const optimizesvg = () => {
   return gulp.src(['source/img/*.svg', '!source/img/social/*.svg'])
-  .pipe(svgo())
-  .pipe(gulp.dest('build/img'));
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
 }
 
-//export const sprite = () => {
-//  return gulp.src('source/img/social/*.svg')
-//  .pipe(svgo())
-//  .pipe(svgstore({inlineSVG:true}))
-//  .pipe(rename('sprite.svg'))
-//  .pipe(gulp.dest('build/img'));
-//
+export const sprite = () => {
+  return gulp.src('source/img/social/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({inlineSVG:true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
 
 
 //Copy
 
- const copy = () => {
+const copy = () => {
   return gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico'
   ], {
     base:'source'
   })
-  .pipe(gulp.dest('build'))
+   .pipe(gulp.dest('build'))
   done();
 }
 
 //Clean
 
- const clean = () => {
+const clean = () => {
   return del('build');
 }
 
@@ -125,6 +124,7 @@ export const build = gulp.series(
     styles,
     html,
     optimizesvg,
+    sprite,
     createWebp
   ),
 );
@@ -139,6 +139,7 @@ export default gulp.series(
     styles,
     html,
     optimizesvg,
+    sprite,
     createWebp
   ),
   gulp.series(

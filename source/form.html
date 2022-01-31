@@ -17,7 +17,7 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__logo-wrapper">
-      <a class="page-header__logo" href="index.html">
+      <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу">
         <picture>
         <source media="(min-width:1200px)" srcset="img/logo-desktop.svg">
         <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
@@ -25,7 +25,7 @@
           width="34" height="38" alt="Логотип компании">
           </picture>
         </a>
-      <a class="page-header__logo" href="index.html"> <img class="page-header__logo-text"
+      <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу"> <img class="page-header__logo-text"
           src="img/text-logo.svg" width="101" height="18" alt="Cat Energy"></a>
         </div>
         <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -39,23 +39,6 @@
       </div>
     </nav>
   </header>
-
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
 
   <main class="form-main">
 
@@ -77,12 +60,12 @@
 
               <li class="form__group-item animal-description__item">
                 <label class="form__label" for="weight"> Вес (кг): <sup>* </sup></label>
-                <input class="form__input" type="text" id="weight" name="weight" placeholder="7" required>
+                <input class="form__input" type="number" id="weight" name="weight" placeholder="7" required>
               </li>
 
               <li class="form__group-item animal-description__item">
                 <label class="form__label" for="years"> Возраст (лет): </label>
-                <input class="form__input" type="text" id="years" name="years" placeholder="7">
+                <input class="form__input" type="number" id="years" name="years" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -119,7 +102,7 @@
           </div>
 
           <fieldset class="form__group owner-contacts">
-            <div class="form_full-width">
+            <div class="form__full-width">
               <div class="form__line"></div>
             <h3 class="form__group-name owner-contacts__name">
               Контактные данные (владельца кота)
@@ -130,7 +113,7 @@
               <li class="form__group-item owner-contacts__item">
                 <label class="form__label" for="email"> E-mail: <sup>* </sup></label>
                 <div class="form__input-wrapper">
-                <input class="form__input owner-contacts__input" type="text" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="form__input owner-contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="form__navigation-icon owner-contacts__navigation-icon" aria-hidden="true" focusable="false" width="19" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke-width="1.3" d="M.65 5.85v8M17.65 5.85v8M0 13.2h18M0 1.2h18M17.35 3.03 9 9.53.65 3.02V1.5h16.7v1.53Z"/></svg>
                 </div>
               </li>
@@ -138,7 +121,7 @@
               <li class="form__group-item owner-contacts__item">
                 <label class="form__label" for="phone"> Телефон: <sup>* </sup></label>
                 <div class="form__input-wrapper">
-                <input class="form__input owner-contacts__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                <input class="form__input owner-contacts__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
                 <svg class="form__navigation-icon owner-contacts__navigation-icon" aria-hidden="true" focusable="false" width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/></g><defs><clipPath id="a"><path transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs></svg>
                 </div>
               </li>
@@ -146,17 +129,17 @@
           </fieldset>
 
           <fieldset class="form__group comments">
-            <div class="form_full-width">
+            <div class="form__full-width">
               <div class="form__line">
               </div>
             <h3 class="form__group-name comments__name">
               Комментарий </h3>
             </div>
-            <textarea class="form__text-input" name="notes" rows="8" placeholder="Расскажите обо всех повадках кота "></textarea>
+            <textarea class="form__text-input" name="notes" rows="8" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__group additional-product">
-            <div class="form_full-width">
+            <div class="form__full-width">
               <div class="form__line">
               </div>
             <h3 class="form__group-name additional-product__name"> Дополнительно
@@ -210,7 +193,7 @@
       <div class="address__map-wrapper map-wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.167342576136!2d30.31972967745924!3d59.93905025206773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1637990218770!5m2!1sru!2sru"
-          width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" aria-label="Взаимодействовать с картой"></iframe>
       </div>
     </section>
   </main>
@@ -219,7 +202,7 @@
     <div class="page-footer__wrapper">
 
       <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo" href="#"> <img class="page-footer__logo-text" src="img/text-logo.svg"
+        <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу"> <img class="page-footer__logo-text" src="img/text-logo.svg"
             width="128" height="24" alt="Cat Energy"></a>
       </div>
 
@@ -236,10 +219,32 @@
 
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"> <svg class="copyright__navigation-icon" aria-hidden="true" focusable="false" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/></svg> </a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт HTML Академии"> <svg class="copyright__navigation-icon" aria-hidden="true" focusable="false" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/></svg> </a>
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    if (navMain.classList.contains('main-nav--opened')) {
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+    }
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--opened')) {
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+      } else {
+        navMain.classList.add('main-nav--opened');
+        navMain.classList.remove('main-nav--closed');
+      }
+    });
+  </script>
 
 </body>
 

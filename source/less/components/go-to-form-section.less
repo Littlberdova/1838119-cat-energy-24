@@ -10,7 +10,7 @@
   padding-right: 35px;
   padding-top: 27px;
   padding-bottom: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   background-image: url("../img/index-background-mobile.png");
   height: 274px;
@@ -27,21 +27,19 @@
 }
 
 .go-to-form__busket-bg {
-  background: url("../img/index-can-mobile.png") no-repeat center;
-  background-size: 280px auto;
   width: 280px;
   height: 270px;
   margin-top: -288px;
   align-self: center;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/index-can-mobile@2x.png") no-repeat center;
-    background-size: 280px auto;
-  }
 }
 
-.go-to-form_header {
-  font-size: 33px;
+.go-to-form__busket-img {
+  display: block;
+}
+
+.go-to-form__header {
+  font-size: 36px;
+  font-weight: 400;
   line-height: 36px;
   text-align: center;
   margin-top: 0;
@@ -73,12 +71,6 @@
     padding-bottom: 506px;
     padding-left: 120px;
     padding-right: 120px;
-    background: url("../img/index-can-tablet.png") no-repeat center 235px;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/index-can-tablet@2x.png") no-repeat center 235px;
-      background-size: 709px auto;
-    }
   }
 
   .go-to-form__wrapper {
@@ -88,16 +80,22 @@
   }
 
   .go-to-form__busket-bg {
-    display: none;
+    z-index: -1;
   }
 
-  .go-to-form_header {
+  .go-to-form__busket-img {
+    position: absolute;
+    top: 343px;
+    left: 4%;
+  }
+
+  .go-to-form__header {
     color: #000000;
-    font-size: 56px;
+    font-size: 60px;
     line-height: 100%;
     width: 448px;
     text-align: left;
-    margin-bottom: 47px;
+    margin-bottom: 36px;
   }
 
   .go-to-form__slogan {
@@ -113,7 +111,7 @@
     font-size: 20px;
     line-height: 100%;
     width: 193px;
-    margin-top: -49px;
+    margin-top: -30px;
   }
 }
 
@@ -126,15 +124,31 @@
     padding-right: 190px;
     margin-top: -147px;
     margin-bottom: 82px;
-    background: url("../img/index-can-desktop.png") no-repeat 556px 149px, url("../img/index-background-desktop.png") no-repeat right, linear-gradient(to right, transparent 50%, #68b738d9 50%);
+    background-image: url("../img/index-background-desktop.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/index-can-desktop@2x.png") no-repeat 141px 330px, url("../img/index-background-desktop@2x.png") no-repeat right, linear-gradient(to right, transparent 50%, #68b738d9 50%);
+      background-image: url("../img/index-background-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 50%;
     }
+  }
+
+  .go-to-form__busket-bg {
+    z-index: 1;
+  }
+
+  .go-to-form__busket-img {
+    position: absolute;
+    top: 147px;
+    left: 39%;
   }
 
   .go-to-form__button {
     align-self: flex-start;
-    margin-top: -71px;
+    margin-top: -27px;
   }
 }
