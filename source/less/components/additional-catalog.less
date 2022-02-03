@@ -20,7 +20,7 @@
   transform: translateY(-50%);
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, transparent 10%, #68b738 10%);
+  background-color: #68b738;
   z-index: -1;
 }
 
@@ -28,13 +28,16 @@
   position: relative;
   display: block;
   background-color: #ffffff;
-  width: 226px;
+  width: fit-content;
+  word-break: break-word;
   padding-right: 20px;
+  padding-left: 23px;
+  margin: 0;
+  margin-left: -23px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  margin: 0;
 }
 
 .additional-catalog__product-name-link {
@@ -119,10 +122,6 @@
     padding-bottom: 80px;
     padding-left: 67px;
     padding-right: 67px;
-  }
-
-  .additional-catalog__line {
-    background: linear-gradient(to right, #68b738 5%, transparent 5%, transparent 20%, #68b738 20%);
   }
 
   .additional-catalog__title {
