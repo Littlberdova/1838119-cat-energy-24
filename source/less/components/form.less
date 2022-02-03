@@ -21,10 +21,19 @@
 }
 
 .form__wrapper {
+  padding-bottom: 32px;
+}
+
+.form__group-container {
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 32px;
+}
+
+.form__box {
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .form__notion {
@@ -50,12 +59,10 @@
 }
 
 .form__full-width {
-  width: 100vw;
+  width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin: 0;
+  padding: 0;
 }
 
 .form__line {
@@ -64,7 +71,8 @@
   transform: translateY(-50%);
   width: 100%;
   height: 2px;
-  background: #68b738;
+  background: linear-gradient(to right, transparent 20%, #68b738 20%);
+  z-index: -1;
 }
 
 .form__group-name {
@@ -202,9 +210,21 @@
   }
 
   .form__wrapper {
+    padding-bottom: 72px;
+  }
+
+  .form__group-container {
     padding-left: 70px;
     padding-right: 70px;
-    padding-bottom: 72px;
+  }
+
+  .form__box {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .form__line {
+    background: linear-gradient(to right, #68b738 4%, transparent 4%, transparent 20%, #68b738 20%);
   }
 
   .form__notion {
@@ -279,12 +299,30 @@
     padding-bottom: 56px;
     padding-left: 110px;
     padding-right: 110px;
+    width: 1220px;
+    margin: 0 auto;
   }
 
   .form__wrapper {
+    padding-bottom: 82px;
+  }
+
+  .form__group-container {
+    width: 1220px;
     padding-left: 110px;
     padding-right: 110px;
-    padding-bottom: 82px;
+    margin: 0 auto;
+  }
+
+  .form__box {
+    padding-left: 110px;
+    padding-right: 110px;
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .form__line {
+    background: linear-gradient(to right, #68b738 5%, transparent 5%, transparent 23%, #68b738 23%);
   }
 
   .form__group-name {

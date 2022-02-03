@@ -47,32 +47,34 @@
         <h3 class="form__title"> Подбор программы </h3>
       </header>
       <div class="form__wrapper">
+        <div class="form__box">
         <p class="form__notion">Заполните анкету, и мы подберем программу питания для вашего кота </p>
+        </div>
         <form class="form__fill" action="https://echo.htmlacademy.ru/" method="get">
           <div class="form__group-container animal-description">
-          <fieldset class="form__group animal-description__group">
-            <legend class="visually-hidden"> Характеристики питомца</legend>
-            <ul class="form__group-list animal-description__list">
-              <li class="form__group-item animal-description__item">
+            <fieldset class="form__group animal-description__group">
+              <legend class="visually-hidden"> Характеристики питомца</legend>
+              <ul class="form__group-list animal-description__list">
+                <li class="form__group-item animal-description__item">
                 <label class="form__label" for="name"> ИМЯ: <sup>* </sup></label>
                 <input class="form__input" type="text" id="name" name="name" placeholder="Барсик" required>
-              </li>
+                </li>
 
-              <li class="form__group-item animal-description__item">
+                <li class="form__group-item animal-description__item">
                 <label class="form__label" for="weight"> Вес (кг): <sup>* </sup></label>
                 <input class="form__input" type="number" id="weight" name="weight" placeholder="7" required>
-              </li>
+                </li>
 
-              <li class="form__group-item animal-description__item">
+                <li class="form__group-item animal-description__item">
                 <label class="form__label" for="years"> Возраст (лет): </label>
                 <input class="form__input" type="number" id="years" name="years" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
+                </li>
+              </ul>
+           </fieldset>
 
-          <fieldset class="form__group animal-description__group">
-            <legend class="visually-hidden"> Потребность </legend>
-            <ul class="form__group-list animal-description__list">
+           <fieldset class="form__group animal-description__group">
+              <legend class="visually-hidden"> Потребность </legend>
+              <ul class="form__group-list animal-description__list">
 
               <li class="form__group-item animal-description__item">
                 <input class="visually-hidden animal-description__control-input" name="requirement" type="radio" value="weight-loss"
@@ -97,18 +99,22 @@
                   <span class="animal-description__control-mark"></span>
                   <span class="animal-description__control-label"> Не знаю (Нужен ваш совет) </span></label>
               </li>
-            </ul>
-          </fieldset>
+              </ul>
+            </fieldset>
           </div>
 
-          <fieldset class="form__group owner-contacts">
-            <div class="form__full-width">
-              <div class="form__line"></div>
-            <h3 class="form__group-name owner-contacts__name">
-              Контактные данные (владельца кота)
-            </h3>
+          <div class="form__full-width">
+            <div class="form__box">
+              <h3 class="form__group-name owner-contacts__name"> Контактные данные (владельца кота)</h3>
+            </div>
+            <div class="form__line"></div>
           </div>
-            <ul class="form__group-list owner-contacts__list">
+
+
+          <div class="form__box">
+            <fieldset class="form__group owner-contacts">
+              <legend class="visually-hidden"> Контактные данные (владельца кота) </legend>
+              <ul class="form__group-list owner-contacts__list">
 
               <li class="form__group-item owner-contacts__item">
                 <label class="form__label" for="email"> E-mail: <sup>* </sup></label>
@@ -125,27 +131,36 @@
                 <svg class="form__navigation-icon owner-contacts__navigation-icon" aria-hidden="true" focusable="false" width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/></g><defs><clipPath id="a"><path transform="translate(0 .32)" d="M0 0h20v20.07H0z"/></clipPath></defs></svg>
                 </div>
               </li>
-            </ul>
-          </fieldset>
+              </ul>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__group comments">
-            <div class="form__full-width">
-              <div class="form__line">
-              </div>
-            <h3 class="form__group-name comments__name">
-              Комментарий </h3>
+          <div class="form__full-width">
+            <div class="form__box">
+              <h3 class="form__group-name comments__name"> Комментарий </h3>
             </div>
-            <textarea class="form__text-input" name="notes" rows="8" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
+            <div class="form__line"></div>
+          </div>
 
-          <fieldset class="form__group additional-product">
-            <div class="form__full-width">
-              <div class="form__line">
-              </div>
-            <h3 class="form__group-name additional-product__name"> Дополнительно
-            </h3>
+          <div class="form__box">
+            <fieldset class="form__group comments">
+              <legend class="visually-hidden"> Комментарий </legend>
+              <textarea class="form__text-input" name="notes" rows="8" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+          </div>
+
+          <div class="form__full-width">
+            <div class="form__box">
+              <h3 class="form__group-name additional-product__name"> Дополнительно </h3>
             </div>
-            <ul class="form__group-list additional-product__list">
+            <div class="form__line"></div>
+          </div>
+
+
+          <div class="form__box">
+            <fieldset class="form__group additional-product">
+              <legend class="visually-hidden"> Дополнительно </legend>
+              <ul class="form__group-list additional-product__list">
 
               <li class="form__group-item additional-product__item">
                 <input class="visually-hidden additional-product__control-input" id="sweetener" name="sweetener" type="checkbox" checked>
@@ -173,11 +188,13 @@
                   <span class="additional-product__control-mark"></span>
                   <span class="additional-product__control-label"> Витамины </span></label>
               </li>
-            </ul>
-          </fieldset>
+              </ul>
+            </fieldset>
+          </div>
+
           <div class="form__group-container form-button">
-          <button class="button form__button form-button__click" type="submit"> Отправить заявку </button>
-          <small class="form__note form-button__note"> <sup> * </sup> — Обязательные поля </small>
+            <button class="button form__button form-button__click" type="submit"> Отправить заявку </button>
+            <small class="form__note form-button__note"> <sup> * </sup> — Обязательные поля </small>
           </div>
         </form>
       </div>
@@ -185,9 +202,11 @@
 
     <section class="address">
       <h2 class="visually-hidden"> Адрес компании </h2>
+      <div class="address__container">
       <div class="address__wrapper address__wrapper--grey-theme">
         <p class="address__note"> Приглашаем <br> к сотрудничеству дилеров!</p>
         <address class="address__place"> <span> ул. Большая Конюшенная, д. 19/8 </span> <span>Санкт-Петербург </span> </address>
+      </div>
       </div>
 
       <div class="address__map-wrapper map-wrapper">
